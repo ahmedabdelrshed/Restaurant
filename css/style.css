@@ -66,6 +66,77 @@ p {
     font-size: 14px;
 }
 
+span {
+    color: var(--d-yellow);
+    font-family: var(--font-Great);
+}
+
+section {
+    padding: 100px 0 0;
+    text-align: center;
+}
+
+section .container {
+    width: 85%;
+    margin: auto;
+}
+
+.sec-head {
+    position: relative;
+    z-index: 2;
+}
+
+.sec-head span {
+    font-size: 35px;
+}
+
+.sec-head h2 {
+    color: var(--dark);
+    font-size: 45px;
+}
+
+.boxs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.boxs .box {
+    flex-basis: 31.5%;
+}
+
+.small-sec {
+    position: relative;
+    padding: 180px 0;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.small-sec .sec-head h2 {
+    color: var(--light);
+}
+
+.arrow-bottom,
+.arrow-top {
+    content: "";
+    position: absolute;
+    width: 92px;
+    height: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+
+.arrow-top {
+    background: url(../images/arrow-up.png);
+    top: -1px;
+}
+
+.arrow-bottom {
+    background: url(../images/arrow-down.png);
+    bottom: -1px;
+}
+
 /* Start Header */
 .header {
     width: 100%;
@@ -233,6 +304,10 @@ p {
         transition: 0.2s;
     }
 
+    .header.active nav ul li a {
+        color: var(--light);
+    }
+
     .header nav .menu ul li.active,
     .header nav .menu ul li:hover {
         background-color: var(--d-yellow);
@@ -323,3 +398,183 @@ p {
 }
 
 /* End Home */
+
+/* Start About */
+.about .content .div-p {
+    margin: auto;
+    padding: 80px;
+}
+
+.about .content .div-p p {
+    color: var(--dark);
+    font-size: 40px;
+    font-family: var(--font-Great);
+}
+
+.about .content .boxs .box span {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.about .content .boxs .box h3 {
+    color: var(--dark);
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.about .content .boxs .box p {
+    font-size: 14px;
+    color: var(--Pcolor);
+}
+
+/* Media Query */
+@media(max-width:991px) {
+    .boxs .box {
+        flex-basis: 48%;
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width:768px) {
+    .sec-head span {
+        font-size: 28px;
+    }
+
+    .sec-head h2 {
+        font-size: 35px;
+    }
+
+    .about .content .div-p {
+        padding: 30px 0 30px;
+
+    }
+
+    .about .content .div-p p {
+        font-size: 25px;
+    }
+
+    .boxs {
+        justify-content: center;
+    }
+
+    .boxs .box {
+        flex-basis: 100%;
+    }
+}
+
+/* End About */
+
+/* Start Recipes */
+.recipes .small-sec {
+    background: url(../images/sec-bg1.jpg), no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.recipes .boxs .box img {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.recipes .boxs .box span {
+    font-size: 30px;
+    margin: 0 15px;
+}
+
+.recipes .boxs .box h4 {
+    font-size: 28px;
+    padding-bottom: 20px;
+    color: var(--dark);
+}
+
+.recipes .boxs .box p {
+    color: var(--Pcolor);
+    font-size: 14px;
+}
+
+/* End Recipes */
+
+/* Start Menu */
+.sec-menu .small-sec {
+    background: url(../images/sec-bg2.jpg), no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.sec-menu .content ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.sec-menu .content ul li {
+    color: var(--dark);
+    font-size: 22px;
+    font-family: var(--font-Kuashan);
+    cursor: pointer;
+    text-transform: capitalize;
+    margin: 0 40px;
+    transition: 0.3s;
+}
+
+.sec-menu .content ul li:hover,
+.sec-menu .content ul li.active {
+    color: var(--d-yellow);
+}
+
+.sec-menu .boxs .box {
+    margin-bottom: 40px;
+}
+
+.sec-menu .boxs .box img {
+    width: 100%;
+}
+
+.sec-menu .boxs .box .name-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 15px;
+    align-items: center;
+}
+
+.sec-menu .boxs {
+    margin-bottom: 40px;
+}
+
+.sec-menu .boxs .box h3 {
+    font-size: 22px;
+    text-transform: capitalize;
+    font-family: "Raleway", sans-serif;
+}
+
+.sec-menu .boxs .box span {
+    font-size: 18px;
+    font-family: var(--font-Kuashan);
+    font-weight: 500;
+}
+
+.sec-menu .boxs .box p {
+    text-align: left;
+}
+
+.sec-menu .btn {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.sec-menu .btn:hover {
+    background-color: var(--d-yellow);
+}
+
+/* Media Query */
+@media(max-width:768px) {
+    .sec-menu .content ul li {
+        font-size: 18px;
+        margin: 0 15px;
+    }
+}
+
+/* End Menu */

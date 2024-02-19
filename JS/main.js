@@ -17,6 +17,19 @@ window.onscroll = function () {
   }
 };
 
+//click on  Section links on header
+let sectionLinks = Array.from(
+  document.querySelectorAll(".header nav .menu ul li")
+);
+sectionLinks.forEach(function (link) {
+  link.onclick = function () {
+    sectionLinks.forEach((l) => {
+      l.classList.remove("active");
+    });
+    link.classList.add("active");
+  };
+});
+
 // Swiper Js
 var swiper = new Swiper(".home-slider", {
   navigation: {
@@ -27,6 +40,6 @@ var swiper = new Swiper(".home-slider", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  spaceBetween:0,
+  spaceBetween: 0,
   loop: true,
 });
