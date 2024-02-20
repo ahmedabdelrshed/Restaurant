@@ -578,3 +578,158 @@ section .container {
 }
 
 /* End Menu */
+
+/* Start Team  */
+.team {
+    padding-bottom: 50px;
+}
+
+.team .small-sec {
+    background: url(../images/sec-bg3.jpg), no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.team .boxs .box img {
+    width: 100%;
+    position: relative;
+    transition: 0.3s;
+}
+
+.team .boxs .box {
+    flex-basis: 22%;
+    background-color: var(--light);
+    box-shadow: 0 0 18px rgb(40, 40, 40/ 12%);
+}
+
+.team .boxs .box .title {
+    padding: 30px 0;
+}
+
+.team .boxs .box .title h5 {
+    font-size: 22px;
+    margin-bottom: 14px;
+
+}
+
+.team .boxs .box .img-text {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.team .boxs .box .img-text .text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #222222cb;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 28px 15px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.team .boxs .box .img-text:hover .text {
+    opacity: 1;
+}
+
+.team .boxs .box .img-text:hover img {
+    transform: scale(1.1);
+}
+
+.team .boxs .box .img-text .text .cont-text {
+    width: 85%;
+    bottom: -50%;
+    position: absolute;
+    margin-bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+
+}
+
+.team .boxs .box .img-text:hover .text .cont-text {
+    bottom: 0;
+
+}
+
+.team .boxs .box .img-text .text .cont-text .social i {
+    margin: 15px 10px;
+    color: var(--d-yellow);
+    transition: 0.3s;
+}
+
+.team .boxs .box .img-text .text .cont-text .social i:hover {
+    color: var(--light);
+    transform: scale(1.2);
+}
+
+.team .boxs .box .img-text .text .cont-text p {
+    color: var(--light);
+}
+
+/* Media Query */
+@media(max-width:991px) {
+    .team .boxs .box {
+        flex-basis: 40%;
+    }
+}
+
+@media(max-width:768px) {
+    .team .boxs .box {
+        flex-basis: 90%;
+    }
+}
+
+/* End Team  */
+
+/* Start Guest Book */
+.guest-book .small-sec {
+    background: url(../images/sec-bg4.jpg), no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.guest-book .boxs {
+    margin-top: 30px;
+}
+
+.guest-book .box {
+    z-index: 99;
+    background-color: var(--light);
+    position: relative;
+    padding: 30px 20px;
+}
+
+.guest-book .box .ribbon {
+    position: absolute;
+    top: 0;
+    left: 10%;
+}
+
+.guest-book .box .stars {
+
+    margin: 0 5px 25px;
+}
+
+.guest-book .box .stars i {
+    color: #ffc88a;
+}
+
+.guest-book .box h5 {
+    font-size: 23px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.guest-book .box p {
+    margin-top: 30px;
+    font-size: 18px;
+    color: var(--dark);
+}
+
+/* End Guest Book */
