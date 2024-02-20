@@ -500,8 +500,6 @@ section .container {
 }
 
 .btn-swip {
-    height: 70px;
-    width: 70px;
     color: var(--light) !important;
 }
 
@@ -528,6 +526,9 @@ section .container {
     .home .home-slider .slide .content .btn {
         font-size: 14px;
         padding: 10px 20px;
+    }
+    .home .home-slider .btn-swip {
+        display: none;
     }
 }
 
@@ -838,7 +839,7 @@ section .container {
 }
 
 .guest-book .box {
-    z-index: 99;
+    z-index: 98;
     background-color: var(--light);
     position: relative;
     padding: 30px 20px;
