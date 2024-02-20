@@ -46,8 +46,23 @@ var swiper = new Swiper(".home-slider", {
 
 // Copy Rigth Year
 
-var pyear = document.querySelector('.copy-rigth p')
+var pyear = document.querySelector(".copy-rigth p");
 
-var y = new Date()
+var y = new Date();
 
-pyear.innerHTML = `&copy; ${y.getFullYear()} Restaurant , <span>Ahmed Abdelrashed</span>`
+pyear.innerHTML = `&copy; ${y.getFullYear()} Restaurant , <span>Ahmed Abdelrashed</span>`;
+
+// Reservation
+let closeresrve = document.getElementById("closeResrv");
+let reservation = document.querySelector(".reservation");
+let btn_res = document.querySelectorAll(".btn-res");
+
+closeresrve.onclick = () => {
+  reservation.classList.remove("active");
+};
+
+btn_res.forEach((btn) => {
+  btn.onclick = () => {
+    reservation.classList.add("active");
+  };
+});

@@ -12,6 +12,28 @@
     --font-Great: "Great Vibes", cursive;
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--light);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--d-yellow);
+}
+
+*::selection {
+    color: var(--light);
+    background-color: var(--d-yellow);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,9 +42,6 @@
     text-decoration: none;
 }
 
-/* body {
-    height: 3000px;
-} */
 
 /* Global Elements */
 .btn {
@@ -320,6 +339,117 @@ section .container {
 }
 
 /* End Header */
+/* Start Reservation */
+.reservation {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    z-index: 800;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(39, 39, 39, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.reservation.active {
+    top: 0;
+
+}
+
+.reservation .res-bg {
+    width: 65vw;
+    background-color: var(--light);
+    border-radius: 2px;
+    padding: 25px 100px;
+    text-align: center;
+    position: relative;
+}
+
+.reservation .res-bg .text h3 {
+    text-align: center;
+    color: var(--d-yellow);
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.reservation form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.reservation form input {
+    width: 28%;
+    padding: 15px 10px;
+    outline: none;
+    margin-bottom: 30px;
+    border: 1px solid #a5a5a552;
+}
+
+.reservation form textarea {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #a5a5a552;
+    outline: none;
+    line-height: 2;
+}
+
+.reservation form textarea:focus,
+.reservation form input:focus {
+    border-color: var(--d-yellow);
+}
+
+.reservation .btn {
+    cursor: pointer;
+    background-color: var(--dark);
+    padding: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 1.6;
+}
+
+#closeResrv {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--d-yellow);
+    line-height: 30px;
+    color: var(--light);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+/* Media Query */
+@media(max-width:991px) {
+    .reservation .res-bg form input {
+        width: 45%;
+    }
+}
+
+@media(max-width:768px) {
+    .reservation .res-bg form input {
+        width: 100%;
+    }
+
+    .reservation .res-bg {
+        width: 80vw;
+        overflow: auto;
+        height: 70vh;
+        padding: 25px 40px;
+    }
+}
+
+/* End Reservation */
 
 /* Start Home */
 .home .home-slider .slide1 {
@@ -744,10 +874,6 @@ section .container {
 /* End Guest Book */
 
 /* Start Footer */
-.footer {
-    /* padding: 20px; */
-}
-
 .footer .mg-boxs {
     background-color: var(--dark);
 }

@@ -17,28 +17,48 @@
 </head>
 
 <body>
+    <!-- Start Reservation -->
+    <div class="reservation">
+        <i class="fas fa-bars fa-times" id="closeResrv"></i>
+        <div class="res-bg">
+            <div class="text">
+                <h3>Book a Table</h3>
 
+            </div>
+            <form action="">
+                <input type="text" placeholder="Full Name">
+                <input type="number" placeholder="Phone Number">
+                <input type="Email" placeholder="Email Address">
+                <input type="text" placeholder="How Many">
+                <input type="date" placeholder="Booking Date">
+                <input type="time" placeholder="Time">
+                <textarea name="" id="" cols="30" rows="2" placeholder="Add a Special Request"></textarea>
+            </form>
+            <button class="btn">Find Table</button>
+        </div>
+    </div>
+    <!-- End Reservation -->
     <!-- Start Header -->
     <header class="header">
         <nav>
             <a href="#" class='logo'>Restaurant</a>
             <i id="openmenu" class="fa-solid fa-bars"></i>
-            <i id="book" class="fas fa-utensils"></i>
+            <i id="book" class="fas fa-utensils btn-res"></i>
             <div class="menu">
                 <ul>
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Recipes</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Team</a></li>
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#team">Team</a></li>
                 </ul>
-                <a href="" class="btn">Reservation</a>
+                <a href="#" class="btn btn-res">Reservation</a>
             </div>
         </nav>
     </header>
     <!-- End Header -->
     <!-- Start Home -->
-    <div class="home">
+    <div class="home" id="home">
         <div class="swiper home-slider">
             <div class="swiper-wrapper wrapper">
                 <div class="swiper-slide slide slide1 bg-overlay">
@@ -53,7 +73,7 @@
                     <div class="content">
                         <h3>Restaurant Offers You</h3>
                         <h1>The Best Testing Experience!</h1>
-                        <a href="#" class="btn">Get a Reservation Now</a>
+                        <a href="#" class="btn  btn-res">Get a Reservation Now</a>
                     </div>
                 </div>
                 <div class="swiper-slide slide slide3 bg-overlay">
@@ -70,7 +90,7 @@
     </div>
     <!-- End Home -->
     <!-- Start About -->
-    <section class="about">
+    <section class="about" id='about' >
         <div class="container">
             <div class="sec-head">
                 <span>Hello dear</span>
@@ -109,7 +129,7 @@
     </section>
     <!-- End About -->
     <!-- Start Recipes -->
-    <section class="recipes">
+    <section class="recipes" id="recipes">
         <div class="small-sec bg-overlay">
             <div class="arrow-top"></div>
             <div class="sec-head">
@@ -146,7 +166,7 @@
     </section>
     <!-- End Recipes -->
     <!-- Start Menu -->
-    <section class="sec-menu">
+    <section class="sec-menu" id="menu">
         <div class="small-sec bg-overlay">
             <div class="arrow-top"></div>
             <div class="sec-head">
@@ -219,7 +239,7 @@
     </section>
     <!-- End Menu -->
     <!-- Start Team -->
-    <section class="team">
+    <section class="team" id="team">
         <div class="small-sec bg-overlay">
             <div class="arrow-top"></div>
             <div class="sec-head">
@@ -385,8 +405,10 @@
                 <div class="links list">
                     <h4>Follow Us</h4>
                     <div class="box-links">
-                        <a href="https://www.linkedin.com/in/ahmed-abdelrashed-581607254" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=100024575770751&mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/ahmed-abdelrashed-581607254" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100024575770751&mibextid=ZbWKwL"
+                            target="_blank"><i class="fab fa-facebook"></i></a>
                         <a href="https://github.com/ahmedabdelrshed" target="_blank"><i class="fab fa-github"></i></a>
 
                     </div>
