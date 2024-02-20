@@ -43,3 +43,11 @@ var swiper = new Swiper(".home-slider", {
   spaceBetween: 0,
   loop: true,
 });
+
+// Copy Rigth Year
+
+var pyear = document.querySelector('.copy-rigth p')
+
+var y = new Date()
+
+pyear.innerHTML = `&copy; ${y.getFullYear()} Restaurant , <span>Ahmed Abdelrashed</span>`
